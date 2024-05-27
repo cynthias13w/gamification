@@ -62,11 +62,6 @@ def visualize_columns(df, column_names):
         ax.set_ylabel(None)
 
 
-# st.markdown('## Analysis')
-# st.code('''
-#         df = pd.read_csv('nebenan.csv')
-#         print(df)''', language='python')
-
 df = pd.read_csv('nebenan.csv')
 # st.write(df)
 df.fillna(0, inplace=True)
@@ -95,6 +90,28 @@ def page_event_planner():
     st.write('631 users created 1 event the last four weeks')
     st.write('131 users created 2 events the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['EVENTS_CREATED']))
+
+    st.markdown("""📆 Event Planner: At least **6** events with a minimum of **3** participants in **12** weeks
+
+There are 20k users and 849 have at least 1 event created the last month (4 weeks).
+
+I visualised the users by the number of events created per month
+
+I analyzed percentages of active users (users who have created one event or more):
+
+1 event - 631 = 74.4%
+2 events - 131 = 15.6%
+3+ events - 10%
+
+I decided to focus on the top 25% in order to strike a balance between ease and difficulty to obtain the badge, therefore, top 25% would equal to roughly 2+ events/months
+
+2 events/ month *  3 months = 6 events during 12 weeks
+
+Total number of participants = 67% Events have 2 or fewer so we will focus on 3 participants at least (not to make it too hard)
+
+Organizing events takes time and effort
+
+                """)
 
 def page_conversation_starter():
     st.markdown('## 🗣️ Conversation Starter')
