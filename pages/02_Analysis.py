@@ -80,72 +80,141 @@ two_months = df_8weeks - (one_month_and_half + one_month)
 # Three months ago
 three_months = df_12weeks - (two_months + one_month_and_half + one_month)
 
-
-
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def page_event_planner():
     st.markdown('## 📆 EVENT PLANNER')
-    st.write('''Example of how to read this graph:''')
-    st.write('631 users created 1 event the last four weeks')
-    st.write('131 users created 2 events the last four weeks, etc.')
+    st.markdown("""At least **6** events with a minimum of **3** participants in **12** weeks""")
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('631 users created 1 event the last four weeks')
+    st.caption('131 users created 2 events the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['EVENTS_CREATED']))
 
-    st.markdown("""📆 Event Planner: At least **6** events with a minimum of **3** participants in **12** weeks
+    st.markdown("""
 
-There are 20k users and 849 have at least 1 event created the last month (4 weeks).
+*Explanation:*
 
-I visualised the users by the number of events created per month
+849 (out of 20k users) have at least 1 event created the last month (4 weeks).
 
-I analyzed percentages of active users (users who have created one event or more):
+I visualised the users by the number of events created per month and analyzed percentages of active users (users who have created one event or more):
 
 1 event - 631 = 74.4%
+
 2 events - 131 = 15.6%
+
 3+ events - 10%
 
-I decided to focus on the top 25% in order to strike a balance between ease and difficulty to obtain the badge, therefore, top 25% would equal to roughly 2+ events/months
+I decided to focus on the top 25% of users in order to strike a balance between ease and difficulty to obtain the badge, therefore, top 25% would equal to roughly 2+ events/months
 
 2 events/ month *  3 months = 6 events during 12 weeks
-
-Total number of participants = 67% Events have 2 or fewer so we will focus on 3 participants at least (not to make it too hard)
-
-Organizing events takes time and effort
-
+""")
+    st.write('-'*20)
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('370 users welcomed 1 participant the last four weeks')
+    st.caption('184 users received 2 participants the last four weeks, etc.')
+    st.pyplot(visualize_columns(one_month, ['EVENT_PARTICIPANTS']))
+    st.markdown('*Explanation:*')
+    st.markdown('Total number of participants = 67%')
+    st.markdown("""I chose 3 participants to not make it too hard but still make it encouraging
+            since there are 6 events to organise for 12 weeks and organizing events takes time and effort.
                 """)
 
 def page_conversation_starter():
     st.markdown('## 🗣️ Conversation Starter')
-    st.write('''Example of how to read this graph:''')
-    st.write('4217 users created 1 post the last four weeks')
-    st.write('679 users received 1 reply the last four weeks, etc.')
+    st.markdown(""" At least **6** posts with a minimum of **5** replies in **12** weeks.""")
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('4217 users created 1 post the last four weeks')
+    st.caption('679 users received two posts the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['POSTS_CREATED']))
+    st.markdown("""
+        *Explanation*
 
-    st.write('''Example of how to read this graph:''')
-    st.write('822 users received 1 reply the last four weeks')
-    st.write('644 users received 1 reply the last four weeks, etc.')
+        Considering the users who created at least one post
+
+        80% of users created 1 post per month
+
+        20% of users created 2 posts or more per month
+
+        We will take 2 posts per month
+        """
+    )
+    st.write('-'*20)
+
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('822 users received 1 reply the last four weeks')
+    st.caption('644 users received 2 replies the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['REPLIES_RECEIVED']))
+    st.markdown("""For the replies to get into the top 25% of posts with the most replies, the posts need to have at least 5 replies revealed as follows:
+
+    1 reply - 27% of posts
+
+    2 replies - 20% of posts
+
+    3 replies - 14% of posts
+
+    4 replies - 11% of posts
+
+    5 replies - 6% of posts (breaking into the top 25 %)""")
 
 def page_philanthropist():
     st.markdown('## 🎁 Philanthropist')
-    st.write('''Example of how to read this graph:''')
-    st.write('1374 users gifted once the last four weeks')
-    st.write('298 users gifted twice the last four weeks, etc.')
+    st.markdown(""" At least **6** items gifted on the marketplace in **12** weeks.""")
+
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('1374 users gifted once the last four weeks')
+    st.caption('298 users gifted twice the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['ITEMS_GIFTED']))
+    st.markdown("""
+                *Explanation:*
+
+                69% of users who have gifted - 1 item gifted
+
+                15% of users who have gifted - 2 items gifted (breaking into the top 25%)
+
+                2 * 3 months (12 weeks) = 6 items gifted per user """)
 
 def page_helping_hand():
     st.markdown('## 🫱🏻 Helping Hand')
-    st.write('''Example of how to read this graph:''')
-    st.write('1028 users received 1 thankyou the last four weeks')
-    st.write('412 users received 2 thankyous the last four weeks, etc.')
+    st.markdown("""At least **10** thank-you messages received in **12** weeks.""")
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('1028 users received 1 thankyou the last four weeks')
+    st.caption('412 users received 2 thankyous the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['THANKYOUS_RECEIVED']))
+    st.markdown("""
+                *Explanation*
+
+                Users with at least X thank you message per month:
+
+                1 thank you message - 48%
+
+                2 thank you message - 19%
+
+                3 thank you message - 8%
+
+                It takes 3 thank you messages to break into the top 25% of the users with the most thank you messages per month
+
+                3 * 3 months (12 weeks) = 9 -> rounding up to 10 thank you messages
+                """)
 
 def page_local_guide():
     st.markdown('## 🧳 Local Guide')
-    st.write('''Example of how to read this graph:''')
-    st.write('638 users recommended 1 place the last four weeks')
-    st.write('169 users recommended 2 places the last four weeks, etc.')
+    st.markdown("""At least **10** places recommended in **12** weeks.""")
+    st.caption('''Example of how to read the following graph:''')
+    st.caption('638 users recommended 1 place the last four weeks')
+    st.caption('169 users recommended 2 places the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['PLACES_RECOMMENDED']))
+    st.markdown("""
+                *Explanation*
 
+                Users with one recommendation - 61%
+
+                Users with 2 recommendations - 16%
+
+                Users with 3 recommendations - 5% (breaking the into 25%)
+
+                3 recommendations per month * 3 months (12 weeks) = 9 recommendations -> rounding it up to 10 recommendations
+
+                """)
 
 def main():
     st.sidebar.title("Badges")

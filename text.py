@@ -85,12 +85,13 @@ challenge = """
             ● Places_recommended: Number of places the user recommended in given time frame!"""
 
 predictions="""
-            📆 Event Planner: At least X **events** with Y **participants** in Z weeks.
 
-            🗣️ Conversation Starter: At least X **posts** with Y **replies** in Z weeks.
+            📆 Event Planner: At least 6 **events** with 3 **participants** in 12 weeks.
 
-            🎁 Philanthropist: At least X items **gifted** on the marketplace in Z weeks.
+            🗣️ Conversation Starter: At least 6 **posts** with 5 **replies** in 12 weeks.
 
-            🫱🏻 Helping Hand: At least X **thank-you messages** received in Z weeks.
+            🎁 Philanthropist: At least 6 items **gifted** on the marketplace in 12 weeks.
 
-            🧳 Local Guide: At least X **places recommended** in Z weeks."""
+            🫱🏻 Helping Hand: At least 10 **thank-you messages** received in 12 weeks.
+
+            🧳 Local Guide: At least 10 **places recommended** in 12 weeks."""

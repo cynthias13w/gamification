@@ -64,8 +64,8 @@ def visualize_columns(df, column_names):
         ax.set_ylabel(None)
 
 def page_home():
-    st.title("Nebenan Challenge")
-    st.markdown("## My recommendations for each badge's criteria:")
+    st.markdown('<h1 style="color: #CAE85D;">Nebenan Challenge</h1>', unsafe_allow_html=True)
+    st.markdown("""<h3 style="color: #FE9DE1;">Recommendations:</h3>""", unsafe_allow_html=True)
     st.write(predictions)
 
 if __name__ == "__main__":
