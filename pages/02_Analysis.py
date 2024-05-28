@@ -114,8 +114,14 @@ I decided to focus on the top 25% of users in order to strike a balance between 
     st.caption('184 users received 2 participants the last four weeks, etc.')
     st.pyplot(visualize_columns(one_month, ['EVENT_PARTICIPANTS']))
     st.markdown('*Explanation:*')
-    st.markdown('Total number of participants = 67%')
-    st.markdown("""I chose 3 participants to not make it too hard but still make it encouraging
+    st.markdown('67% of users have 1 or 2 participants.')
+    st.markdown("""
+                44.85% of users - 1 participant
+
+                22.30% of users - 2 participants
+
+                12.85% of users - 3 participants (falls into top 25%)""")
+    st.markdown("""Therefore, I chose 3 participants to not make it too hard but still make it encouraging
             since there are 6 events to organise for 12 weeks and organizing events takes time and effort.
                 """)
 
@@ -135,7 +141,7 @@ def page_conversation_starter():
 
         20% of users created 2 posts or more per month
 
-        We will take 2 posts per month
+        2 posts/ month falls into the top 25% users.
         """
     )
     st.write('-'*20)
@@ -183,17 +189,17 @@ def page_helping_hand():
     st.markdown("""
                 *Explanation*
 
-                Users with at least X thank you message per month:
+                Users with at least X thank you reaction per month:
 
-                1 thank you message - 48%
+                1 thank you reaction - 48%
 
-                2 thank you message - 19%
+                2 thank you reactions - 19%
 
-                3 thank you message - 8%
+                3 thank you reactions - 8%
 
-                It takes 3 thank you messages to break into the top 25% of the users with the most thank you messages per month
+                It takes 3 thank you reactions to break into the top 25% of the users with the most thank you reactions per month
 
-                3 * 3 months (12 weeks) = 9 -> rounding up to 10 thank you messages
+                3 * 3 months (12 weeks) = 9 -> rounding up to 10 thank you reactions
                 """)
 
 def page_local_guide():

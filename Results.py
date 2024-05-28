@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
+st.set_page_config(
+    page_title="Nebenan",
+    page_icon="📦")
+
 def print_badge_associations(column_name):
     """
     Print the names of badges associated with the given column name.

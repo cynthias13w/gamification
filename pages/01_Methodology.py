@@ -10,7 +10,7 @@ To conduct this analysis, I proceeded with the following assumptions:
 st.markdown("""<h3 style="color: #FE9DE1;">How did I come up with a strategy?</h3>""", unsafe_allow_html=True)
 st.markdown("""I started with different approaches:""")
 
-st.markdown("""1. I isolated data per data frame in order to look at visualisations of individual months (three months of data) which I found similar.""")
+st.markdown("""1. I isolated data per time frame in order to look at visualisations of individual months (three months of data) which I found similar.""")
 st.markdown("""2. I looked at statistics of unique values to understand the spread of the data (maximum values, median)""")
 st.markdown("""3. I analysed top users in order to gain insights regarding outliers. (see .ipynb notebook)""")
 
